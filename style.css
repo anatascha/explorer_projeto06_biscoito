@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #190361, #bb00ff);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    width: 26.75rem; /* 428px / 16px = 26.75rem */
+    padding: 3rem 4rem 4rem 4rem; /* 48px / 16px = 3rem; 64px / 16px = 4rem */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    background: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+#fortune-cookie {
+    border: 2px dashed #aaa;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.5s;
+}
+
+#open-cookie {
+    cursor: pointer;
+    width: 15.553rem; /* 248.842px / 16px = 15.553rem */
+    height: 11.987rem; /* 191.79px / 16px = 11.987rem */
+    flex-shrink: 0; 
+    transition: transform 0.5s;
+}
+
+#open-cookie:hover {
+    transform: scale(1.1);
+}
+
+#opened-cookie {
+    cursor: pointer;
+    flex-shrink: 0; 
+    padding: 2.695rem 0 2.646rem 0; /* 43.128px / 16px = 2.695rem; 42.341px / 16px = 2.646rem */ 
+    transition: transform 0.5s;
+}
+
+#new-cookie {
+    padding: 1rem; /* 16px / 16px = 1rem */
+    align-items: flex-start;
+    gap: 0.625rem; /* 10px / 16px = 0.625rem */
+    border-radius: 0.25rem; /* 4px / 16px = 0.25rem */
+    background: #FF9500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem; /* assuming font-size: 16px */
+}
+
+.opened {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
